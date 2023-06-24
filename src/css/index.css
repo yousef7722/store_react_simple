@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+.hero-pag-bullets {
+  display: flex;
+  z-index: 10;
+  gap: 20px;
+  left: 50%;
+  translate: -50%;
+  bottom: 0;
+}
+
+.hero-pag {
+  width: 80px;
+  height: 5px;
+  border-radius: 2px;
+  display: inline-block;
+  background-color: red;
+}
+
+.cart-num {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: rgb(255, 226, 60);
+  color: black;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  translate: 25% -25%;
+}
+.cart-num span {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.mode-toggler {
+  width: 40px;
+  height: 21px;
+  border-radius: 20px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  position: relative;
+  transition: 0.5s;
+  overflow: hidden;
+}
+.mode-toggler .ball {
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  background-color: black;
+  height: 17px;
+  width: 17px;
+  border-radius: 50%;
+  transition: 0.5s;
+}
+.mode-toggler .ball::before {
+  position: absolute;
+  content: "";
+  background-color: white;
+  width: 100%;
+  transition: 0.5s;
+  height: 90%;
+  left: 0;
+  top: 5%;
+  border-radius: 50%;
+  translate: 100%;
+}
+.mode-toggler.active {
+  background-color: black;
+  box-shadow: 0 0 5px 1px white;
+}
+.mode-toggler.active .ball {
+  translate: 19px;
+  background-color: white;
+}
+.mode-toggler.active .ball::before {
+  background-color: black;
+  translate: 30%;
+}
+
+.yn-transition {
+  transition: 0.5s;
+}/*# sourceMappingURL=index.css.map */
