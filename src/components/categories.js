@@ -6,7 +6,6 @@ const Categories = () => {
   const [category, setCategory] = useState([]);
   const { id: cate } = useParams()
   useEffect(() => {
-    console.log("cate effect")
     fetch(`https://dummyjson.com/products/category/${cate}`)
       .then((res) => res.json())
       .then((json) =>{console.log(json); setCategory(json.products);return json})

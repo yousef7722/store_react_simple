@@ -38,7 +38,7 @@ const Item = (props) => {
     let msg = "Add to Cart"
     if (data.length > 0) {
       for (let i = 0; i < data.length; i++) {
-        if (id == data[i].id) {
+        if (id === data[i].id) {
           msg = "In Cart"
         }
       }
@@ -81,7 +81,7 @@ const Item = (props) => {
   }
   return (
     //lg:w-1/4 md:w-1/2 
-    <figure className={`max-h-item  ${props.class || "w-1/4"} shadow-md flex  px flex-col justify-between p-4`}>
+    <figure className={`max-h-item  ${props.class || ""} shadow-md flex  px flex-col justify-between p-4`}>
       <Link to={`/single/${item.id}`} className={`${props.h && props.h} block relative w-full h-48 rounded overflow-hidden`}>
         <img
           alt="ecommerce"
@@ -93,7 +93,7 @@ const Item = (props) => {
         <h3 className="tracking-widest title-font mb-1">
           {item.title}
         </h3>
-        <h2 className="title-font font-medium">
+        <h2 className="title-font font-medium hidden md:block">
           {item.description}
         </h2>
         <section className="flex items-center">

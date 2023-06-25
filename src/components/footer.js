@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className={`${mode.dark ? "text-gray-300" : "text-white"} body-font`}>
       <div className={`${mode.dark ? "bg-gray-900" : "bg-elzero"} yn-transition`}>
         <div className="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
-          <p className="text-sm text-center sm:text-left">© 2023 react practice by yousef nabil</p>
+          <p className="text-sm text-center sm:text-left">© react practice - yousef nabil</p>
           <span className="inline-flex sm:ml-auto gap-1 sm:mt-0 mt-2 justify-center sm:justify-start">
             <a>
               <svg fill="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5" viewBox="0 0 24 24">

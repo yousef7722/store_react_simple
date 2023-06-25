@@ -11,8 +11,8 @@ const FavList = () => {
       <ul className=''>
         {
           data.length?
-          data.map(e =>
-            <li className='flex gap-8 shadow-md p-4 text-gray-800'>
+          data.map((e,i) =>
+            <li key={`favlist${i}`} className='flex gap-8 shadow-md p-4 text-gray-800'>
               <img className='w-40 object-contain' src={`${e.thumbnail}`} alt="" />
               <div>
                 <p>{e.title}</p>
